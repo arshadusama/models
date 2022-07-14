@@ -18,3 +18,4 @@ lazy val root = (project in file("."))
       "org.elasticsearch" %% "elasticsearch-spark-30" % esVersion
     )
   )
+
