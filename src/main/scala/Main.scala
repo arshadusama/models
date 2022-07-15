@@ -13,7 +13,8 @@ import org.elasticsearch.spark.sql.sparkDatasetFunctions
 
 object Main {
 
-  def sparkConf = new SparkConf().setAppName("Main").setMaster("local").set("es.index.auto.create", "true")
+  def sparkConf = new SparkConf().setAppName("Main").setMaster("local").set("es.index.auto.create", "true").set("spark.es.nodes", "192.168.100.144").set("spark.es.port", "9200")
+
   def main(args: Array[String]): Unit = {
 
 
