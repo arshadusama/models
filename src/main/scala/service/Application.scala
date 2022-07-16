@@ -1,12 +1,15 @@
 package service
 
 import models.Result
+import io.circe.generic.auto._
+import io.circe.syntax._
+import io.circe.parser._
 import org.apache.spark.sql.{Column, DataFrame, Dataset, Row, SparkSession, functions}
-import org.apache.spark.sql.functions.{col, from_unixtime, window}
+import org.apache.spark.sql.functions._
 import org.elasticsearch.spark.sql.sparkDatasetFunctions
 
 import java.sql.Timestamp
-import scala.collection.convert.ImplicitConversions.`collection AsScalaIterable`
+import scala.util.parsing.json.JSONObject
 
 case class Application(){
 
@@ -25,21 +28,28 @@ case class Application(){
       .withColumn("time", from_unixtime(col("time")/1000))
       .withColumn("cities", col("group_city"))
 
-    val res = data.select(col("time"),col("cities") ,col("group_city"))
-      .groupBy(window(col("time"), "7 days", "7 days"), col("cities"))
-      .agg(functions.count("group_city"))
+    val cityCountsByTimeWindow = data.select(col("time"),col("cities") ,col("group_city"))
+      .groupBy(window(col("time"), "1 days", "1 days"), col("cities"))
+      .agg(functions.count("group_city").as("city_count"))
       .orderBy(col("window"))
 
-    println(s"schema of result is  ${res.schema}")
 
-    val objects = res.map{ row =>
+    val cityCountsByTime = cityCountsByTimeWindow.map{ row =>
 
-      val time = row.getList[Timestamp](0).toList
-      val cityName = row.getString(1)
-      val score = row.getInt(2)
-      Result(time = time.head, cityName = cityName, score = score)
+      val time = row.getStruct(0).getAs[Timestamp]("start")
+      val cityName = row.getAs[String]("cities")
+      val score = row.getAs[Long]("city_count")
+      Result(time, cityName, score)
     }
-    objects.saveToEs("rsvp/docs")
+
+    val trendingCities = cityCountsByTime.select(col("time"), col("cityName"), col("score"))
+      .groupBy(col("time") )
+      .agg(functions.max("score").as("score") )
+      .orderBy("time")
+
+    trendingCities.show()
+
+    trendingCities.saveToEs("rsvp")
 
   }
 }
