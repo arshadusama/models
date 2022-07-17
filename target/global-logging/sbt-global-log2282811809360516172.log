@@ -1,0 +1,85 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.7.1 (Private Build Java 11.0.15)
+[debug] Load.defaultLoad until apply took 351.162135ms
+[debug]           Load.loadUnit: plugins took 221.665498ms
+[debug]           Load.loadUnit: defsScala took 0.903392ms
+[debug] [Loading] Scanning directory /home/usama/IdeaProjects/spark-test-case/project
+[debug]             Load.loadUnit: mkEval took 18.094851ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/usama/IdeaProjects/spark-test-case/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 48.177067 ms
+[info] loading settings for project spark-test-case-build from plugins.sbt ...
+[debug]               Load.resolveProject(spark-test-case-build) took 133.235283ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id spark-test-case-build, base: /home/usama/IdeaProjects/spark-test-case/project, plugins: List(<none>))) took 251.131023ms
+[debug] [Loading] Done in /home/usama/IdeaProjects/spark-test-case/project, returning: (spark-test-case-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 1925.808828ms
+[debug]           Load.loadUnit: cleanEvalClasses took 22.718175ms
+[debug]         Load.loadUnit(file:/home/usama/IdeaProjects/spark-test-case/project/, ...) took 2187.2927ms
+[debug]       Load.apply: load took 2547.440369ms
+[debug]       Load.apply: resolveProjects took 15.463919ms
+[debug]       Load.apply: finalTransforms took 160.279648ms
+[debug]       Load.apply: config.delegates took 20.368729ms
+[debug]       Load.apply: Def.make(settings)... took 1231.963045ms
+[debug]       Load.apply: structureIndex took 366.822622ms
+[debug]       Load.apply: mkStreams took 5.363541ms
+[info] loading project definition from /home/usama/IdeaProjects/spark-test-case/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 6938.254964ms
+[debug]     Load.loadUnit: defsScala took 0.005936ms
+[debug] [Loading] Scanning directory /home/usama/IdeaProjects/spark-test-case
+[debug]       Load.loadUnit: mkEval took 0.589308ms
+[debug] [Loading] Found root project root w/ remaining 
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbtide.ConfigPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbtassembly.AssemblyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbtassembly.AssemblyPlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbtassembly.AssemblyPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 5.984997 ms
+[info] loading settings for project root from build.sbt ...
+[debug]         Load.resolveProject(root) took 66.857468ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id root, base: /home/usama/IdeaProjects/spark-test-case, plugins: List(<none>))) took 76.178507ms
+[debug] [Loading] Done in /home/usama/IdeaProjects/spark-test-case, returning: (root)
+[debug]     Load.loadUnit: loadedProjectsRaw took 215.508362ms
+[debug]     Load.loadUnit: cleanEvalClasses took 2.103733ms
+[debug]   Load.loadUnit(file:/home/usama/IdeaProjects/spark-test-case/, ...) took 7160.153265ms
+[debug] Load.apply: load took 7226.88134ms
+[debug] Load.apply: resolveProjects took 0.455114ms
+[debug] Load.apply: finalTransforms took 38.817235ms
+[debug] Load.apply: config.delegates took 1.789892ms
+[debug] Load.apply: Def.make(settings)... took 258.451448ms
+[debug] Load.apply: structureIndex took 132.747157ms
+[debug] Load.apply: mkStreams took 0.028766ms
+[info] set current project to spark (in build file:/home/usama/IdeaProjects/spark-test-case/)

@@ -15,7 +15,9 @@ lazy val root = (project in file("."))
       "io.circe" %% "circe-core" % circeVersion,
       "io.circe" %% "circe-generic" % circeVersion,
       "io.circe" %% "circe-parser" % circeVersion,
-      "org.elasticsearch" %% "elasticsearch-spark-30" % esVersion
+      "org.elasticsearch" %% "elasticsearch-spark-30" % esVersion,
+      "org.scalatest" %% "scalatest" % "3.2.2" % Test,
+      "org.mockito" %% "mockito-scala" % "1.16.23" % Test
     )
   )
 
