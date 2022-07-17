@@ -1,0 +1,10 @@
+[0m[[0m[0minfo[0m] [0m[0m:: delivering :: com.testcase#models_2.13;0.2.0-SNAPSHOT :: 0.2.0-SNAPSHOT :: integration :: Sun Jul 17 19:03:50 PKT 2022[0m
+[0m[[0m[0mdebug[0m] [0m[0m	options = status=integration pubdate=Sun Jul 17 19:03:50 PKT 2022 validate=true resolveDynamicRevisions=true merge=true resolveId=null pubBranch=null[0m
+[0m[[0m[0minfo[0m] [0m[0m	delivering ivy file to /home/usama/IdeaProjects/models/target/scala-2.13/ivy-0.2.0-SNAPSHOT.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0m	deliver done (84ms)[0m
+[0m[[0m[0mdebug[0m] [0m[0mlocal do not support transaction. ivy pattern does not use revision as a directory[0m
+[0m[[0m[0minfo[0m] [0m[0m	published models_2.13 to /home/usama/.ivy2/local/com.testcase/models_2.13/0.2.0-SNAPSHOT/poms/models_2.13.pom[0m
+[0m[[0m[0minfo[0m] [0m[0m	published models_2.13 to /home/usama/.ivy2/local/com.testcase/models_2.13/0.2.0-SNAPSHOT/jars/models_2.13.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	published models_2.13 to /home/usama/.ivy2/local/com.testcase/models_2.13/0.2.0-SNAPSHOT/srcs/models_2.13-sources.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	published models_2.13 to /home/usama/.ivy2/local/com.testcase/models_2.13/0.2.0-SNAPSHOT/docs/models_2.13-javadoc.jar[0m
+[0m[[0m[0minfo[0m] [0m[0m	published ivy to /home/usama/.ivy2/local/com.testcase/models_2.13/0.2.0-SNAPSHOT/ivys/ivy.xml[0m

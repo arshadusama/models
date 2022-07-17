@@ -1,23 +1,17 @@
-ThisBuild / version := "0.1.0-SNAPSHOT"
+ThisBuild / version := "0.2.0-SNAPSHOT"
 
 ThisBuild / scalaVersion := "2.13.8"
 
 val circeVersion = "0.14.1"
-val sparkVersion = "3.2.1"
-val esVersion    = "8.2.3"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "spark",
+    organization := "com.testcase",
+    name := "models",
     libraryDependencies ++= Seq(
-      "org.apache.spark" %% "spark-core" % sparkVersion,
-      "org.apache.spark" %% "spark-sql" % sparkVersion,
       "io.circe" %% "circe-core" % circeVersion,
       "io.circe" %% "circe-generic" % circeVersion,
-      "io.circe" %% "circe-parser" % circeVersion,
-      "org.elasticsearch" %% "elasticsearch-spark-30" % esVersion,
-      "org.scalatest" %% "scalatest" % "3.2.2" % Test,
-      "org.mockito" %% "mockito-scala" % "1.16.23" % Test
+      "io.circe" %% "circe-parser" % circeVersion
     )
   )
 
